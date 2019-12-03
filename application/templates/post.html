@@ -1,0 +1,57 @@
+<html>
+{% extends "layout.html" %}
+{% block body_content %}
+        <div class="form">
+                <form method="Post" action="">
+                        {{ form.hidden_tag()}}
+                        <div class="form-group">
+                                 {{ form.title_name.label }}
+                                 {{ form.title }}
+                                 {%if form.title.errors%}
+                                         {{form.title }}
+                                         <div class="error">
+                                                {% for error in form.title.errors %}
+                                                        <span>{{ error }}</span>
+                                                {% endfor %}
+                                         </div>
+                                 {% else %}
+                                        {{ form.title }}
+                                 {% endif %}
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                                 {{ form.content.label }}
+                                 {% if form.content.errors %}
+                                         {{ form.content }}
+                                         <div class="error">
+                                                {% for error in form.content.errors %}
+                                                        <span>{{ error }}</span>
+                                                {% endfor %}
+                                         </div>
+                                 {% else %}
+                                                             {{ form.title }}
+                                 {% endif %}
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                                 {{ form.content.label }}
+                                 {% if form.content.errors %}
+                                         {{ form.content }}
+                                         <div class="error">
+                                                {% for error in form.content.errors %}
+                                                        <span>{{ error }}</span>
+                                                {% endfor %}
+                                         </div>
+                                 {% else %}
+                                        {{ form.content }}
+                                 {% endif %}
+                        </div>
+                        <br>
+                        <div class="form="form-group">
+                                  {{ form.submit }}
+                </form>
+        </div>
+{% endblock body_content %}
+</html>

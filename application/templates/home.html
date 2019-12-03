@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+{% block body_content %}
+        <p>justevents</p>
+{% for post in posts %}
+        <div>
+             <h3>{{ post.title }}</h3>
+             <span>by <i>{{ post.author.first_name:</b>{{ post.author.last_name }}</i></span>
+             <span>on the <i>{{ post.date_posted }}</i></span>
+             <p> -- {{ post.content }}</p>
+        </div>
+{% endfor %}
+{% endblock body_content %}
+
+{% extends "layout.html" %}
+{% block body_content %}
+<html>
+  <body>
+    <h1>Add event</h1>
+    <form method="POST" action="/">
+      <input type="text" name="title">
+      <input type="submit" value="Add">
+    </form>
+
+    <h1>Events</h1>
+    <table>
+      {% for event in events %}
+        <tr>
+          <td>
+            {{ event.title}}
+          </td>
+          <td>
+            <form method="POST" action="./update" style="display: inline">
+              <input type="hidden" value="{{event.title}}" name="oldtitle">
+              <input type="text" value="{{event.title}}" name="newtitle">
+              <input type="submit" value="Update">
+            </form>
+          </td>
+          <td>
+            <form method="POST" action="./delete" style="display: inline">
+              <input type="hidden" value="{{event.title}}" name="title">
+              <input type="submit" value="Delete">
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+      {% endblock body_content %}
+
+    </table>
+  </body>
+</html>

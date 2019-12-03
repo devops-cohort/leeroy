@@ -1,0 +1,42 @@
+
+<html>
+{% extends "layout.html" %}
+{% block body_content %}
+        <h1>Register Page</h1>
+        <p>Need an account? Sign up!</p>
+        <div class="form">
+                <form method="Post" actions="">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group">
+                                {{ form.first_name.label }}
+                                {% if form.first_name.errors %}
+                                        {{ form.first_name }}
+                                        <div class="error">
+                                                {% for error in form.first_name.errors %}
+                                                        <span>{{ error }}</span>
+                                                {% endfor %}
+                                        </div
+                                {% else %}
+                                        {{ form.first_name }}
+                                {% endif %}
+                        </div>
+                        <br>
+                        <div class="form-group">
+                                {{ form.last_name.label }}
+                                {% if form.last_name.errors %}
+                                        {{ form.last_name }}
+                                        <div class="error">
+                                                {% for error in from.last_name.errors %}
+                                                        <span>{{ error }}</span>
+                                                {% endfor %}
+                                        </div>
+                                {% else %}
+                                        {{ form.last_name }}
+                                {% endif %}
+                        </div>
+                </form>
+        </div>
+{% endblock body_content %}
+</html>
+
+
