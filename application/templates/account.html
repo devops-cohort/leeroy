@@ -48,7 +48,11 @@
                                         {{ form.email }}
                                 {% endif %}
                         </div>
+			<div class="form-group">
+				{{ form.submit }}
+			</div>
                 </form>
         </div>
+	<a href='/delete-test?id={{user_id}}'>Delete your account</a>
 {% endblock body_content %}
 </html>

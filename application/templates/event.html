@@ -1,37 +1,80 @@
 {% extends "layout.html" %}
 {% block body_content %}
-<html>
-  <body>
-    <h1>Create an Event </h1>
-    <form method="POST" action="/">
-      <input type="text" name="title">
-      <input type="submit" value="Add">
-    </form>
-
-    <h1>Event</h1>
-    <table>
-      {% for event in events %}
-        <tr>
-          <td>
-            {{ event.title}}
-          </td>
-          <td>
-            <form method="POST" action="./update" style="display: inline">
-              <input type="hidden" value="{{event.title}}" name="oldtitle">
-              <input type="text" value="{{event.title}}" name="newtitle">
-              <input type="submit" value="Update">
-            </form>
-          </td>
-          <td>
-            <form method="POST" action="./delete" style="display: inline">
-              <input type="hidden" value="{{event.title}}" name="title">
-              <input type="submit" value="Delete">
-            </form>
-          </td>
-        </tr>
-      {% endfor %}
-      {% endblock body_content %}
-
-    </table>
-  </body>
-</html>
+	<h1>{{ current_user.first_name }} {{ current_user.last_name}} Account Page</h1>
+	<p> Event</p>
+	<div class="form">
+		<form method="POST" action="">
+			{{ form.hidden_tag() }}
+			<div class="form-group">
+				{{ form.promoter.label }}
+				{% if form.promoter.errors %}
+					{{ form.promoter }}
+					<div class="error">
+						{% for error in form.promoter.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.promoter }}
+				{% endif %}
+			</div>
+			<br>
+			<div class="form-group">
+				{{ form.location.label }}
+				{% if form.location.errors %}
+					{{ form.location }}
+					<div class="error">
+						{% for error in form.location.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.location }}
+				{% endif %}
+			</div>
+			<br>
+			<div class="form-group">
+				{{ form.date_posted.label }}
+				{% if form.date_posted.errors %}
+					{{ form.date_posted }}
+					<div class="errors">
+						{% for error in form.date_posted,errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{%else %}
+					{{ form.date_posted }}
+				{% endif %}
+			</div>
+			<br>
+			   <div class="form-group">
+                                {{ form.user_id.label }}
+                                {% if form.user_id.errors %}
+                                        {{ form.user_id }}
+                                        <div class="error">
+                                                {% for error in form.user_id.errors %}
+                                                        <span>{{ error }}</span>
+                                                {% endfor %}
+                                        </div>
+                                {% else %}
+                                        {{ form.user_id }}
+                                {% endif %}
+				 </div><br>
+                           <div class="form-group">
+                                {{ form.event_date.label }}
+                                {% if form.event_date.errors %}
+                                        {{ form.event_date }}
+                                        <div class="error">
+                                                {% for error in form.event_date.errors %}
+                                                        <span>{{ error }}</span>
+                                                {% endfor %}
+                                        </div>
+                                {% else %}
+                                        {{ form.event_date }}
+                                {% endif %}
+			<div class="form-group">
+				{{ form.submit }}
+			</div>
+		</form>
+	</div>
+{% endblock body_content %}
