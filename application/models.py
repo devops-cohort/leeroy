@@ -37,18 +37,3 @@ class User(db.Model, UserMixin):
                         'Email: ', self.email, '\r\n',
                         'Name: ', self.first_name, ' ', self.last_name])
 
-'''below is code model for the event table and its running the events column'
-class Event(db.Model):
-        id = db.Column(db.Integer, primary_key=True)
-        event_name = db.Column(db.String(50), nullable=False, unique=True)
-        event_date = db.Column(db.DateTime, nullable=False, unique=True)
-        location = db.Column(db.String(15), nullable=False)
-        price =db.Column(db.Float(0.0), nullable=False)
-
-        def __repr__(self):
-              return ' '.join(['Even ID', str(self.id), '\r\n', 'Event_name', str(self.event_name),
-                        'r\n', 'date', strptime(self.date), 'r/n', 'location', str(self.location),
-                        ' r\n', 'price', dec(self.price)
-			 ])'''
-
-

@@ -66,9 +66,9 @@ def update_event():
             return redirect(url_for('home'))
         return render_template('event.html', title='event', form=form)
 
-@app.route('/delete', methods=['GET'])
+@app.route('/account-deleted', methods=['GET'])
 @login_required
-def delete_account():
+def account_deleted():
     user = User.query.filter_by(id=request.args.get('id')).one()
     db.session.delete(user)
     db.session.commit()
