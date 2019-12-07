@@ -36,12 +36,12 @@ class EventForm(FlaskForm):
                         Length(min=4, max=30)
                 ]
         )
-        date_posted = DateTimeField('Date posted--/--/--time',
+        '''date_posted = DateTimeField('Date posted--/--/--time',
                 validators=[
                         DataRequired(),
                         Length(min=6, max=10)
                 ]
-        )
+        )'''
         user_id = StringField('User_id',
                 validators=[
                         DataRequired(),

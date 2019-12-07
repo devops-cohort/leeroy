@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body_content %}
-	<h1>{{ current_user.first_name }} {{ current_user.last_name}} Account Page</h1>
-	<p> Event</p>
+	<h1>{{ current_user.first_name }} {{ current_user.last_name}} Events </h1>
+	<p> Create An Event </p>
 	<div class="form">
 		<form method="POST" action="">
 			{{ form.hidden_tag() }}
@@ -33,20 +33,6 @@
 				{% endif %}
 			</div>
 			<br>
-			<div class="form-group">
-				{{ form.date_posted.label }}
-				{% if form.date_posted.errors %}
-					{{ form.date_posted }}
-					<div class="errors">
-						{% for error in form.date_posted,errors %}
-							<span>{{ error }}</span>
-						{% endfor %}
-					</div>
-				{%else %}
-					{{ form.date_posted }}
-				{% endif %}
-			</div>
-			<br>
 			   <div class="form-group">
                                 {{ form.user_id.label }}
                                 {% if form.user_id.errors %}
@@ -72,7 +58,7 @@
                                 {% else %}
                                         {{ form.event_date }}
                                 {% endif %}
-			<div class="form-group">
+			<div>
 				{{ form.submit }}
 			</div>
 		</form>

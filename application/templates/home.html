@@ -1,37 +1,43 @@
 
 {% extends "layout.html" %}
+<!DOCTYPE html>
+<html>
 {% block body_content %}
-	  <h1>justevents</h1>
-
-
-	  {% for event in events %}
-	  <div>
-             <h2>{{ event.title }}</h2>
-	     <span>by <i>{{ event.author.promoter }}<br>{{ event.location }}</i></span>
-             <span>on the <i>{{ event.date_posted.strftime('%d/%m/%y %H:%M') }}</i></span>
-	     <p>{{ event.content }}</p>
-	  <table>
-		  {% for event in events %}
-		  <tr>
-			  <td>
-				  {{ event.title}}
-			  </td>
-			  <td>
-				  <form method="POST" action="./update" style="display: inline">
-					  <input type="hidden" value="{{event.title}}" name="oldtitle">
-					  <input type="text" value="{{event.title}}" name="newtitle">
-					  <input type="submit" value="Update">
-				  </form>
-			  </td>
-			  <td>
-				  <form method="POST" action="./delete" style="display: inline">
-					  <input type="hidden" value="{{event.title}}" name="title">
-					  <input type="submit" value="Delete">
-				  </form>
-			  </td>
-		  </tr>
-		  {% endfor %}
-
-    </table>
-    {% endfor %}
+<head>
+    <h1>Home Page</h1>
+    <p>Events</p>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-style: dotted;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
+</style>
+</head>
+<table style="width:100%">
+<body>
+<tr>
+<th> Promoter </th>
+<th> Location </th>
+<th> Date Posted </th>
+<th> User ID </th>
+<th> Event Date </th>
+</tr>
+{% for event in event %}
+<tr>
+<td>{{ event.promoter }}</td>
+<td>{{ event.location }}</td>
+<td>{{ event.date_posted }}</td>
+<td>{{ event.event_date }}</td>
+<td><button type="button"> Delete </button></td>
+</tr>
+{% endfor %}
+</body>
 {% endblock body_content %}
+</html>
