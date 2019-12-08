@@ -1,0 +1,5 @@
+At the very beginning of the project, i wanted to create a site that allows users to register, log in into their account and then
+create events. To ensure that the app met CRUD functionality I also allowed users to register, read their account details, update the details in their account and also delete their if the app isn't of any use to them. Overall I managed to build the app to meet the
+MVP of the original idea. Although is has crud functionality on one side i am to push this on the main features of the app for example: the event should also be able to be updated at any given time and also should add a cancel button which will result the user in deleting the event of the site/account. 
+
+There's room for improvements hwithin the app itself, some names in the event columns must be changed to allow easy input of data, one place that could be changed may include removing date input or change out th::civen time restrictions this could be implemented but however the process of doing so would mean clear the currenttabase structure and also redesigning the ER Diagrams. Also some of the foreignkeys may need changing to allow better relation between the tables.  
