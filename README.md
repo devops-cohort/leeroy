@@ -22,14 +22,14 @@ To create a CRUD application using the topics covered during the training and al
 After drafting a few ideas, I decided to create a event listing app that would allow users to sign up and create events to manage. The one to many relationship was working very well as it created a relation between the two tables by having user_ID to take full control of the both tables. 
 
 ###Delievered Solution 
-![ERD](/documentation/erdiagram.png
+![ERD/documentation/erdiagram.png]
 
 The ER diagrams show a relation between the two tables, although this is functional the user is able to navigate between the account page, events and home page. The user_id is also foreignkey in the event table as it triggers the creation and of events in the table, users are not able to use this feature unless they log in or are registered. 
 
 <a name="mla"></a>
 ### CI Pipeline Diagram
 Please check the cipipeline in the documentation
-![CID](/documentation/cipipeline.png
+![CID/documentation/cipipeline.png]
 
 This is a diagram demonstrating the architure of the application it includes a view of what was implemented and what technology was used for each stage of the development of the project. 
 
@@ -44,6 +44,7 @@ Pytest was used for unit testing, Gunicorn was also iniated to support some of t
 * SQL Virtual machine on GCP - Database 
 * Jenkins - CI Server - Automated Testing 
 * Pytest Cov - Unit Testing Coverage 
+* Gunicorn - WSGI HTTP Server- 4Workers Assignment 
 * [Git](https://github.com/devops-cohort/leeroy/tree/feature)- Version Control System
 * [Trello](https://trello.com/b/fpC9DHKx/individual-project) - Project Tracking
 * GCP -Live Environment and hosting VMs
