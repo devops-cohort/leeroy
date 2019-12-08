@@ -1,13 +1,13 @@
 # Project
 To create a CRUD application using the topics covered during the training and also be able to demonstrate the usability of python, linux and continuos intergration servers within the project development. 
 
-#index 
-[Brief] (#brief)
+ 
+[Brief](#brief)
 
 * [Solution](#solution)
 
-[Testing] (#testing)
-* [Report] (#report)
+[Testing](#testing)
+* [Report](#report)
 
 [Deployment](#Depl)
 
@@ -28,7 +28,7 @@ The ER diagrams show a relation between the two tables, although this is functio
 
 <a name="mla"></a>
 ### CI Pipeline Diagram
-Please click on the diagram for a high resolution version:
+Please check the cipipeline in the documentation
 ![CID](/documentation/cipipeline.png
 
 This is a diagram demonstrating the architure of the application it includes a view of what was implemented and what technology was used for each stage of the development of the project. 
