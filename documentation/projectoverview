@@ -1,0 +1,13 @@
+Initial project goals where to create a crud application that will allow users to sign up(register) on to the platform, 
+login into the account with the saved input details during registration mode
+create an event for to ensure the app's full functionality and purpose, I managed to ensure that the app was CRUD in most parts 
+of the app however, this was implemented through trial and error and based on the time constraints i was not able to apply CRUD
+functionality on the other part of the app, so for future reference I would like to apply to crud features on the event page 
+to allow users to delete event which i will include a cancel button. Theres other vulnerabilites to the current app built as
+placing the data on the event with dates is rather a challenge since its charecter count sensitive. I would need to reupdate the
+models.py, forms.py and htmls pages to stop this issue from causing any more problems for the future users. In terms of 
+technology that can be used to make the app more appealing on its front-end would be to use bootstrap in order to style the pages
+add colours which will consists of css langauage. I faced a lot of problems with the built which resulted shutting down of some 
+vms due to unresponsiveness and sometimes finding it difficult to install some components needed for automated testing. I believe 
+with more experience in  python coding, I should be able to add more features to the app and maintain building more by even adding 
+another table to allow more usability. 
