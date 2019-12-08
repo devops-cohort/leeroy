@@ -48,10 +48,10 @@ class EventForm(FlaskForm):
                         Length(min=4, max=100)
                 ]
         )
-        event_date = DateTimeField('Event Date--/--/--time',
+        event_date = DateTimeField('year/month/day/time',
                 validators=[
                         DataRequired(),
-                        Length(min=6, max=10)
+                        Length(min=10, max=12)
                 ]
         )
 
