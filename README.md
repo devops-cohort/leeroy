@@ -1,6 +1,7 @@
 # Project
 To create a CRUD application using the topics covered during the training and also be able to demonstrate the usability of python, linux and continuos intergration servers within the project development. 
 
+[Presentation](https://docs.google.com/presentation/d/1RKA3h-fy6ah1GZviCBI6Ns1eFQrt-vop9flAMNRuZWE/edit?usp=sharing)
  
 [Brief](#brief)
 
