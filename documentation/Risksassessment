@@ -1,0 +1,16 @@
+Risk Assessment 
+1. Issues with building application (Treat/Transfer)--—>>medium likelihood with high impact--—>> I am a new to code and this is a high impact because the application won’t function without the correct code, this would be treated personally through intensive practice and research on how to-do and transfer this by seeking some support from instructors.
+
+2. Issues with database (treat/transfer)--->> medium likelihood with high impact--—>> i think with the wrong database names or column names could cause a high impact on the functionality of the app and could affect the user experience, i should treat this by applying functional names and functional relations in the databases. 
+
+3. Issues with version control systems (Treat/Transfer)--—>> low likelihood and medium impact--—>> Think using Git as a version control system proves to be a reliable system therefore the app should remain functional but however if problem are to arise in pushing changes to the application i should treat this with diligence and transfer this to an instructor. 
+
+4. Poor Planning (treat)--—>low likelihood with High impact--—>>planning is everything to a project is important. high impact as poor planning can affect the project highly, so i will be using Trello to plan out my project and making sure it regularly. 
+
+5. Issues with CI server (treat/transfer)--—>medium likelihood and medium impact--—>> learning to master CI servers can prove to be difficult if connections are not set correctly. The application may still be running and if problems with Jenkins can be solved by other colleagues then I must seek help from instructors. 
+
+6. Issues with running automated tests (treat/transfer)--—>medium likelihood and medium impact--—>>this a medium to high impact due to being foreign to the coding languages. I would have to treat this by doing the manual unit testing then carry to do the automated process i could seek help from others or take it to the instructors. 
+
+7. Gathering documentation issues (treat)--—>low likelihood and medium impact--—>>this is a low likelihood due to access of the resources being documented as the project progressing. The app is running but however sufficient proof of testing and planning of the project is still required. 
+
+8. Presentation issues (treat) : low likelihood and medium impact --—>>this a low likelihood as i feel confident in presenting most topics of the project. The application is partially functioning but poor delivery of presentation may allow audience to lose interest in the project.  
